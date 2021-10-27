@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context="com.example.rog.helloworld.MainActivity">
+
+    <TextView
+        android:id="@+id/txtTemperature"
+        android:text="35°C"
+        android:background="#ff0000"
+        android:textSize="30dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_widthPercent="35%"
+        app:layout_heightPercent="25%"
+        app:layout_marginStartPercent="10%"
+        app:layout_marginTopPercent="10%" />
+    <TextView
+        android:id="@+id/txtHumid"
+        android:text="70%"
+        android:background="#0088ff"
+        android:textSize="30dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_widthPercent="35%"
+        app:layout_heightPercent="25%"
+        app:layout_marginStartPercent="55%"
+        app:layout_marginTopPercent="10%" />
+
+    <ToggleButton
+        android:id="@+id/btn"
+        app:layout_widthPercent="50%"
+        app:layout_heightPercent="20%"
+        app:layout_marginStartPercent="25%"
+        app:layout_marginTopPercent="45%"
+
+        android:background="@drawable/toggle_selector"
+        android:checked="false"
+        android:text="hello how are you"
+        android:textOff=""
+        android:textOn="" />
+
+    <TextView
+        android:text="ANDROID IOT DASHBOARD"
+        android:gravity="center"
+        android:textColor="#0000ff"
+        android:textStyle="bold"
+        app:layout_widthPercent="90%"
+        app:layout_heightPercent="10%"
+        app:layout_marginStartPercent="15%"
+        app:layout_marginTopPercent="90%"
+
+        />
+    <ImageView
+        android:src="@drawable/temperature_icon"
+        android:background="#ff0000"
+        android:scaleType="fitCenter"
+        app:layout_widthPercent="35%"
+        app:layout_heightPercent="7%"
+        app:layout_marginStartPercent="10%"
+        app:layout_marginTopPercent="10%"
+        />
+
+    <ImageView
+        android:src="@drawable/humidity_icon"
+        android:background="#0088ff"
+        android:scaleType="fitCenter"
+        app:layout_widthPercent="35%"
+        app:layout_heightPercent="7%"
+        app:layout_marginStartPercent="55%"
+        app:layout_marginTopPercent="10%"
+        />
+    <ImageView
+        android:src="@drawable/logobk"
+        android:scaleType="fitXY"
+        app:layout_widthPercent="15%"
+        app:layout_heightPercent="20%"
+        app:layout_marginStartPercent="0%"
+        app:layout_marginTopPercent="90%"
+        />
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+</android.support.percent.PercentRelativeLayout>
