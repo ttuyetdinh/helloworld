@@ -7,74 +7,103 @@
     android:background="@drawable/background_gradient"
     tools:context="com.example.rog.helloworld.MainActivity">
 
+    <!-- Temperature-->
+    <ProgressBar
+        android:id="@+id/temp_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:indeterminate="false"
+        android:maxHeight="30dp"
+        android:minHeight="20dp"
+        android:paddingStart="60dp"
+        android:paddingEnd="10dp"
+        android:progressDrawable="@drawable/custom_bar"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="-50dp"
+        />
+
+    <TextView
+        android:id="@+id/temp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:text="Temp:"
+        android:textSize="24sp"
+        />
+
     <TextView
         android:id="@+id/txtTemperature"
-        android:text="35°C"
-        android:background="#ff0000"
-        android:textSize="30dp"
-        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
         android:textStyle="bold"
-        android:gravity="center"
-        app:layout_widthPercent="35%"
-        app:layout_heightPercent="25%"
-        app:layout_marginStartPercent="10%"
-        app:layout_marginTopPercent="10%" />
-    <TextView
-        android:id="@+id/txtHumid"
-        android:text="70%"
-        android:background="#0088ff"
-        android:textSize="30dp"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
-        android:gravity="center"
-        app:layout_widthPercent="35%"
-        app:layout_heightPercent="25%"
-        app:layout_marginStartPercent="55%"
-        app:layout_marginTopPercent="10%" />
-
-    <ToggleButton
-        android:id="@+id/btn"
-        app:layout_widthPercent="50%"
-        app:layout_heightPercent="20%"
-        app:layout_marginStartPercent="25%"
-        app:layout_marginTopPercent="45%"
-
-        android:background="@drawable/toggle_selector"
-        android:checked="false"
-        android:text="hello how are you"
-        android:textOff=""
-        android:textOn="" />
-
-    <TextView
-        android:text="ANDROID IOT DASHBOARD"
-        android:gravity="center"
-        android:textColor="#0000ff"
-        android:textStyle="bold"
-        app:layout_widthPercent="90%"
-        app:layout_heightPercent="10%"
-        app:layout_marginStartPercent="15%"
-        app:layout_marginTopPercent="90%"
-
         />
+
     <ImageView
         android:src="@drawable/temperature_icon"
-        android:background="#ff0000"
-        android:scaleType="fitCenter"
-        app:layout_widthPercent="35%"
-        app:layout_heightPercent="7%"
-        app:layout_marginStartPercent="10%"
-        app:layout_marginTopPercent="10%"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="-20dp"
+        app:layout_widthPercent="20%"
+        app:layout_heightPercent="5%"
+        />
+
+    <!-- Humidity-->
+    <ProgressBar
+        android:id="@+id/humid_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:indeterminate="false"
+        android:maxHeight="30dp"
+        android:minHeight="20dp"
+        android:paddingStart="60dp"
+        android:paddingEnd="10dp"
+        android:progressDrawable="@drawable/custom_bar"
+        android:layout_marginTop="120dp"
+        android:layout_marginStart="-50dp"
+        />
+
+    <TextView
+        android:id="@+id/humid_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:textStyle="bold"
+        android:text="Humid:"
+        android:textSize="24sp"
+        />
+
+    <TextView
+        android:id="@+id/txtHumid"
+        android:textSize="24sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="80dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
         />
 
     <ImageView
         android:src="@drawable/humidity_icon"
-        android:background="#0088ff"
-        android:scaleType="fitCenter"
-        app:layout_widthPercent="35%"
-        app:layout_heightPercent="7%"
-        app:layout_marginStartPercent="55%"
-        app:layout_marginTopPercent="10%"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="-20dp"
+        app:layout_widthPercent="20%"
+        app:layout_heightPercent="5%"
         />
+
+    <!-- Footer-->
     <ImageView
         android:src="@drawable/logobk"
         android:scaleType="fitXY"
@@ -83,11 +112,42 @@
         app:layout_marginStartPercent="0%"
         app:layout_marginTopPercent="90%"
         />
-    <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/lineChart"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+
+    <TextView
+        android:text="ANDROID IOT DASHBOARD"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:textColor="#0000ff"
+        android:textStyle="bold"
+        app:layout_widthPercent="90%"
+        app:layout_heightPercent="10%"
+        app:layout_marginStartPercent="15%"
+        app:layout_marginTopPercent="90%"
         />
 
+    <ToggleButton
+        android:id="@+id/btn"
+        app:layout_widthPercent="50%"
+        app:layout_heightPercent="20%"
+        app:layout_marginStartPercent="25%"
+        app:layout_marginTopPercent="70%"
+        android:background="@drawable/toggle_selector"
+        android:checked="false"
+        android:text=""
+        android:textOff=""
+        android:textOn=""
+        />
 
+    <!--Line Chart-->
+    <com.github.mikephil.charting.charts.LineChart
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/lineChart"
+
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        />
 </android.support.percent.PercentRelativeLayout>

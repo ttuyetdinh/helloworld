@@ -27,7 +27,7 @@ public class MQTTHelper {
 
 
     final String username = "edkenway";
-    final String password = "aio_NrCw16A3cUW4pG6MIzajy8oW6zSk";
+    final String password = "aio_nztt00ZoOYUb1TCxyUjUcB36xaEl";
     final String[] topics = new String[]{"edkenway/f/bbc-temp", "edkenway/f/bbc-humid", "edkenway/f/btn-error", "edkenway/f/button"};
     public MqttAndroidClient mqttAndroidClient;
 
